@@ -1,0 +1,202 @@
+<game_config> 
+  <game_key>insurgencysandstorm_win64</game_key>
+  <protocol>lgsl</protocol>
+  <lgsl_query_name>sandstorm</lgsl_query_name>
+  <installer>steamcmd</installer>
+  <game_name>Insurgency: Sandstorm</game_name>
+  <server_exec_name>InsurgencyServer-Win64-Shipping.exe</server_exec_name>
+  <cli_template>%MAP%%SCENARIO%%PLAYERS%%PASSWORD% %PORT% %QUERY_PORT% %SERVERNAME% %MAPCYCLE% %CONTROL_PASSWORD% %RCON_PORT%</cli_template>
+  <cli_params>
+    <cli_param id="MAP" cli_string="" />
+    <cli_param id="PLAYERS" cli_string="?MaxPlayers=" />
+    <cli_param id="PORT" cli_string="-Port=" />
+    <cli_param id="CONTROL_PASSWORD" cli_string="-RconPassword=" />
+  </cli_params>
+  <reserve_ports>
+    <port type="add" id="QUERY_PORT" cli_string="-QueryPort=">19238</port>
+    <port type="add" id="RCON_PORT" cli_string="-RconListenPort=">10</port>
+  </reserve_ports>
+  <cli_allow_chars>[]</cli_allow_chars>
+  <map_list>maplist.txt</map_list>
+  <console_log>Insurgency/Saved/Logs/Insurgency.log</console_log>
+  <exe_location>Insurgency/Binaries/Win64/</exe_location>
+  <max_user_amount>32</max_user_amount>
+  <mods>
+    <mod key="sandstorm">
+      <name>none</name>
+      <installer_name>581330</installer_name> 
+      <installer_login>anonymous</installer_login>
+    </mod>
+  </mods>
+  <server_params>
+    <param key="-GameStatsToken=" type="text">
+      <caption>Game Stats Token</caption>
+      <desc>Visit the GameStats Token Generator and authenticate through your Stream profile &lt;a href=https://gamestats.sandstorm.game/ target=_blank&gt;here&lt;/a&gt;</desc>
+      <option>ns</option>
+    </param>
+    <param key="-GSLTToken=" type="text">
+      <caption>Steam Game Server Login Token</caption>
+      <desc>Manage your tokens &lt;a href=https://steamcommunity.com/dev/managegameservers target=_blank&gt;here&lt;/a&gt;</desc>
+      <option>ns</option>
+    </param>
+    <param key="-GameStats" type="checkbox_key_value">
+      <caption>Game Stats</caption>
+      <desc>Enable Game Stats (requires valid tokens)</desc>
+    </param>
+    <param key="-ruleset=OfficialRules" type="checkbox_key_value">
+      <caption>Official Rules</caption>
+      <desc>Enable official rules (this locks down the options you can change on your server)</desc>
+    </param>
+    <param key="-mutators=" type="text">
+      <caption>Mutators</caption>
+      <desc>Mutators to be used on the server, separate multiple mutators with a comma and no space</desc>
+      <option>ns</option>
+    </param>
+    <param id="SERVERNAME" key="-hostname=" type="text">
+      <option>q</option>
+      <caption>Server name</caption>
+      <desc>The desired server name</desc>
+    </param>
+    <param id="PASSWORD" key="?password=" type="text">
+      <caption>Password</caption>
+      <option>ns</option>
+      <desc>The password used to join the server</desc>
+    </param>
+    <param id="SCENARIO" key="?Scenario=" type="select">
+      <option value="Scenario_Crossing_Checkpoint_Insurgents">Canyon Checkpoint Insurgents</option>
+      <option value="Scenario_Crossing_Checkpoint_Security">Canyon Checkpoint Security</option>
+      <option value="Scenario_Farmhouse_Checkpoint_Insurgents">Farmhouse Checkpoint Insurgents</option>
+      <option value="Scenario_Farmhouse_Checkpoint_Security">Farmhouse Checkpoint Security</option>
+      <option value="Scenario_Summit_Checkpoint_Insurgents">Mountain Checkpoint Insurgents</option>
+      <option value="Scenario_Summit_Checkpoint_Security">Mountain Checkpoint Security</option>
+      <option value="Scenario_Refinery_Checkpoint_Insurgents">Oilfield Checkpoint Insurgents</option>
+      <option value="Scenario_Refinery_Checkpoint_Security">Oilfield Checkpoint Security</option>
+      <option value="Scenario_Precinct_Checkpoint_Insurgents">Precinct Checkpoint Insurgents</option>
+      <option value="Scenario_Precinct_Checkpoint_Security">Precinct Checkpoint Security</option>
+      <option value="Scenario_Hideout_Checkpoint_Insurgents">Town Checkpoint Insurgents</option>
+      <option value="Scenario_Hideout_Checkpoint_Security">Town Checkpoint Security</option>
+      <option value="Scenario_Crossing_Firefight_West">Canyon Firefight West</option>
+      <option value="Scenario_Farmhouse_Firefight_East">Farmhouse Firefight East</option>
+      <option value="Scenario_Farmhouse_Firefight_West">Farmhouse Firefight West</option>
+      <option value="Scenario_Summit_Firefight_East">Mountain Firefight East</option>
+      <option value="Scenario_Summit_Firefight_West">Mountain Firefight West</option>
+      <option value="Scenario_Refinery_Firefight_West">Oilfield Firefight West</option>
+      <option value="Scenario_Precinct_Firefight_East">Precinct Firefight East</option>
+      <option value="Scenario_Precinct_Firefight_West">Precinct Firefight West</option>
+      <option value="Scenario_Hideout_Firefight_East">Town Firefight East</option>
+      <option value="Scenario_Hideout_Firefight_West">Town Firefight West</option>
+      <option value="Scenario_Crossing_Push_Insurgents">Canyon Push Insurgents</option>
+      <option value="Scenario_Crossing_Push_Security">Canyon Push Security</option>
+      <option value="Scenario_Farmhouse_Push_Insurgents">Farmhouse Push Insurgents</option>
+      <option value="Scenario_Farmhouse_Push_Security">Farmhouse Push Security</option>
+      <option value="Scenario_Summit_Push_Insurgents">Mountain Push Insurgents</option>
+      <option value="Scenario_Summit_Push_Security">Mountain Push Security</option>
+      <option value="Scenario_Refinery_Push_Insurgents">Oilfield Push Insurgents</option>
+      <option value="Scenario_Refinery_Push_Security">Oilfield Push Security</option>
+      <option value="Scenario_Precinct_Push_Insurgents">Precinct Push Insurgents</option>
+      <option value="Scenario_Precinct_Push_Security">Precinct Push Security</option>
+      <option value="Scenario_Hideout_Push_Insurgents">Town Push Insurgents</option>
+      <option value="Scenario_Hideout_Push_Security">Town Push Security</option>
+      <option value="Scenario_Crossing_Skirmish">Canyon Skirmish</option>
+      <option value="Scenario_Farmhouse_Skirmish">Farmhouse Skirmish</option>
+      <option value="Scenario_Summit_Skirmish">Mountain Skirmish</option>
+      <option value="Scenario_Refinery_Skirmish">Oilfield Skirmish</option>
+      <option value="Scenario_Precinct_Skirmish">Precinct Skirmish</option>
+      <option value="Scenario_Hideout_Skirmish">Town Skirmish</option>
+      <options>ns</options>
+      <caption>Scenario</caption>
+      <desc>This is the scenario to be used with the map. Needs to be a valid scenario for the selected map</desc>
+    </param>
+    <param id="MAPCYCLE" key="-MapCycle=" type="select">
+      <option value="">Default</option>
+      <option value="MapCycleCustom">Custom</option>
+      <options>ns</options>
+      <caption>Map cycle</caption>
+      <desc>This is the map cycle, &lt;b&gt;Default&lt;/b&gt; will cycle through all PVP scenarios available, &lt;b&gt;Custom&lt;/b&gt; will use the file &lt;b&gt;Insurgency/Config/Server/MapCycleCustom.txt&lt;/b&gt;</desc>
+    </param>
+    <param key="-Rcon" type="checkbox_key_value">
+      <caption>RCON</caption>
+      <desc>Enable RCON protocol (on server port + 10). Use tools like &lt;a href=https://www.isrt.info/ target=_blank&gt;ISRT&lt;/a&gt; to administer your server. RCON commands can be found &lt;a href=https://sandstorm-support.newworldinteractive.com/hc/en-us/articles/360049211072-Server-Admin-Guide target=_blank&gt;here&lt;/a&gt;</desc>
+    </param>
+    <param key="-EnableCheats" type="checkbox_key_value">
+      <caption>Cheats</caption>
+      <desc>Enable the cheats to be used from the ingame Admin menu</desc>
+    </param>
+  </server_params>
+  <post_install>
+		maplist="maplist.txt"
+		if [ -s "$maplist" ]
+		then
+		echo "File $maplist found. OK!"
+		else
+		echo "File $maplist not found"
+		echo "Generating new maplist file in $maplist"
+		touch maplist.txt
+		echo Canyon > $maplist
+		echo Farmhouse >> $maplist
+		echo Town >> $maplist
+		echo Precinct >> $maplist
+		echo Oilfield >> $maplist
+		echo Mountain >> $maplist
+		fi
+		cyclecustom="Insurgency/Config/Server/MapCycleCustom.txt"
+		if [ -s "$cyclecustom" ]
+		then
+		echo "File $cyclecustom found. OK!"
+		else
+		echo "File $cyclecustom not found"
+		echo "Generating new map cycle file in $cyclecustom"
+		mkdir -p Insurgency/Config/Server/
+		touch Insurgency/Config/Server/MapCycleCustom.txt
+		fi
+		admins="Insurgency/Config/Server/Admins.txt"
+		if [ -s "$admins" ]
+		then
+		echo "File $admins found. OK!"
+		else
+		echo "File $admins not found"
+		echo "Generating new admins list in $admins"
+		touch Insurgency/Config/Server/Admins.txt
+		fi
+		mods="Insurgency/Config/Server/Mods.txt"
+		if [ -s "$mods" ]
+		then
+		echo "File $mods found. OK!"
+		else
+		echo "File $mods not found"
+		echo "Generating new admins list in $mods"
+		touch Insurgency/Config/Server/Mods.txt
+		fi
+		configG="Insurgency/Saved/Config/WindowsServer/Game.ini"
+		if [ -s "$configG" ]
+		then
+		echo "File $configG found. OK!"
+		else
+		echo "File $configG not found"
+		echo "Generating new default config file in $configG"
+		mkdir -p Insurgency/Saved/Config/WindowsServer/
+		touch Insurgency/Saved/Config/WindowsServer/Game.ini
+		fi
+		configE="Insurgency/Saved/Config/WindowsServer/Engine.ini"
+		if [ -s "$configE" ]
+		then
+		echo "File $configE found. OK!"
+		else
+		echo "File $configE not found"
+		echo "Generating new default config file in $configE"
+		mkdir -p Insurgency/Saved/Config/WindowsServer/
+		touch Insurgency/Saved/Config/WindowsServer/Engine.ini
+		echo "[/Script/ModKit.ModIOClient]
+bHasUserAcceptedTerms=True
+AccessToken=TOKEN HERE" > $configE
+		fi
+	</post_install>
+	<configuration_files>
+		<file description="Game Configs">Insurgency/Saved/Config/WindowsServer/Game.ini</file>
+		<file description="Engine Configs">Insurgency/Saved/Config/WindowsServer/Engine.ini</file>
+		<file description="Custom Map Cycle">Insurgency/Config/Server/MapCycleCustom.txt</file>
+		<file description="Admins List">Insurgency/Config/Server/Admins.txt</file>
+		<file description="Bans List">Insurgency/Config/Server/Bans.json</file>
+		<file description="Mods List">Insurgency/Config/Server/Mods.txt</file>
+	</configuration_files>
+</game_config>

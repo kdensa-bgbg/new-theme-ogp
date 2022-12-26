@@ -1,0 +1,85 @@
+.monitorbutton{
+        display:inline-block;
+        color: #323232;
+        background-color: #FFCC00 !important;
+        transition: background-color 0.5s;
+        -webkit-transition: background-color 0.5s;
+        width: 145px;
+        height: 80px;
+		border-radius: 24px;
+        text-align: center;
+        float: left;
+        margin: 1%;
+}
+.monitorbutton.size {
+	line-height: 80px;
+}
+.monitorbutton:hover {
+        background-color:#323232 !important;
+		color: #FFCC00;
+        transition: background-color 0.5s;
+        -webkit-transition: all 0.5s;
+        cursor:pointer;
+        text-decoration:none;
+}
+.monitorbutton img {
+        height: 46px;
+        margin: 2px 0px;
+}
+.monitorbutton span {
+        display: block;
+        color: #323232;
+        font-weight: bold;
+}
+
+.monitorbutton:hover span {
+color: #fff;
+}
+
+.ts3-del-virtual.center {
+	display:none;
+}
+
+.ts3-add-virtual.center{
+	display:none; 
+}
+
+button:active, button[type="submit"]:active, input[type="submit"]:active, .monitorbutton:active {
+	background-color:#0F0 !important;
+	transition: background-color 0.25s;
+	-webkit-transition: background-color 0.25s;
+}
+#server_icon{
+	display:block;
+	float:left;
+	overflow:hidden;
+	margin-top:2px;
+	margin-bottom:4px;
+	margin-left:6px;
+	margin-right:2px;
+	padding-top:1px;
+	padding-bottom:3px;
+	padding-right:5px;
+	color: #323232;
+	background:transparent;
+	cursor:pointer;
+	background-color:#FFCC00;
+	border-radius:3px;
+	font-weight:bold;
+}
+
+#server_icon div{
+	display:inline-block; 
+	vertical-align:middle;
+}
+
+table.center {
+	background-color:#D7EDF3;
+	border:1px solid grey;
+	margin-left:2px;
+}
+
+table.center tr td{
+	background: #D7EDF3 !important;
+	border:none;
+}

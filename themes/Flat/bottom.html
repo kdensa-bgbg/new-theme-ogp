@@ -1,0 +1,42 @@
+<script>
+	(function () {
+		var nodes = document.getElementById('submenu_0').getElementsByTagName('span');
+		for (var i = 0; i < nodes.length; i++) {
+			iconPath = nodes[i].getAttribute("data-icon_path");
+			if (typeof iconPath != "undefined" && iconPath != "") {
+				nodes[i].style.background = "url(" + iconPath + ") 0% 50% / 16px 16px no-repeat scroll transparent";
+				nodes[i].style.padding = "5px 0 5px 25px";
+			}
+		}
+	})();
+</script>
+<div id="bottomWrapper">
+	<div class="new-footer">
+		<div class="beforeFotter">
+			<div class="discord">
+				<a href="#"><i class="fa-brands fa-discord"></i></a>
+				<p>discord.gg/chabka</p>
+			</div>
+			<div class="store">
+				<a href="#"><i class="fa-solid fa-house"></i></a>
+				<p>chabka-hosting.com</p>
+			</div>
+			<div class="whatsapp">
+				<a href="#"><i class="fa-solid fa-phone"></i></a>
+				<p>+33750106263</p>
+			</div>
+
+			
+			
+		</div>
+		<div class="centrreFoterr">
+			<img src="https://cdn.discordapp.com/attachments/1053740728590807070/1056280389146116117/chat.png"
+				alt="chabka">
+			<p>شبكة هوسنتق , الافضل على الاطلاق</p>
+		</div>
+		<div class="afterFotter">
+			<p>Copyright © Chabka Hosting 2022 - All rights reserved</p>
+		</div>
+	</div>
+</div>
+</div>
